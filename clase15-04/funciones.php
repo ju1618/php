@@ -57,6 +57,14 @@
        echo "<br><br>";
 
       echo mayor(1,2,$numeroMagico);
+      echo "<hr>";
+      echo "<br>";
+
+     echo "<h2>punto e</h2>";
+
+      echo "<br><br>";
+      $base=-4;
+      echo tabla ($base, $numeroMagico);
 
      ?>
   </body>
