@@ -1,14 +1,14 @@
 <?php
   $paises=[
-    "Argentina"
-    "Brasil"
-    "Chile"
-    "Perú"
-    "Colombia"
-    "Bolivia"
-    "Venezuela"
-    "Uruguay"
-    "Paraguay"
+    "Argentina",
+    "Brasil",
+    "Chile",
+    "Perú",
+    "Colombia",
+    "Bolivia",
+    "Venezuela",
+    "Uruguay",
+    "Paraguay",
     "Otro"
   ]
 ?>
@@ -53,7 +53,7 @@
 	 </style>
 </head>
 <body>
-   <form method='post'>
+   <form method='post' action="confirmation.php">
       <fieldset >
 			<legend>Registrate</legend>
 
@@ -79,20 +79,24 @@
 				<input type='password' name='password'>
 			</div>
 
-      <div class='form-control'>
-        <label for='password'>Confirmar contraseña<span class="required">*</span>:</label>
-        <input type='password' name='rePassword'>
-      </div>
+      <!-- si recibo versionCorta no muestro las siguientes opciones -->
+      <?php if( isset($_GET["versionCorta"]) && $_GET["versionCorta"] !== "true") : ?>
+        <div class='form-control'>
+          <label for='password'>Confirmar contraseña<span class="required">*</span>:</label>
+          <input type='password' name='rePassword'>
+        </div>
 
-      <div class='form-control'>
-				<label for='phone' >Telefono de contacto<span class="required">*</span>:</label>
-				<input type='text' name='phone'>
-			</div>
+        <div class='form-control'>
+  				<label for='phone' >Telefono de contacto<span class="required">*</span>:</label>
+  				<input type='text' name='phone'>
+  			</div>
 
-      <div class='form-control'>
-				<label for='address' >Direccion<span class="required">*</span>:</label>
-				<input type='text' name='address'>
-			</div>
+        <div class='form-control'>
+  				<label for='address' >Direccion<span class="required">*</span>:</label>
+  				<input type='text' name='address'>
+  			</div>
+    <?php endif; ?>
+
 
       <div class='form-control'>
         <label for='pais'>Nacionalidad<span class="required">*</span>:</label>
@@ -104,8 +108,18 @@
         </select>
       </div>
 
+      <div class='form-control'>
+        <label for="hobbies">Indicá tus hobbies<span class="required">*</span>:</label>
+        <p>
+          <input type="checkbox" name="hobbies[]" value="deporte">Deporte
+          <input type="checkbox" name="hobbies[]" value="pintura">Pintura
+          <input type="checkbox" name="hobbies[]" value="musica">Musica
+          <input type="checkbox" name="hobbies[]" value="actuar">Actuar
+        </p>
+      </div>
+
 			<div class='form-control'>
-				<button type="submit">ENVIAR</button>
+				<button type="submit" >ENVIAR</button>
 			</div>
 
       </fieldset>
