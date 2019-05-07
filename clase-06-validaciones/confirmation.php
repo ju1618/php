@@ -21,6 +21,7 @@ if($_POST) {
   $nombre = $_POST["name"];
   $pais = $_POST["pais"];
   $email = $_POST["email"];
+
   if(isset($_POST["hobbies"])) {
     $hobbies = $_POST["hobbies"];
   }
@@ -32,7 +33,7 @@ if($_POST) {
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="master.css">
-  <title>Perfil de <?= $nombre ?> </title>
+  <!-- <title>Perfil de <?= $nombre ?> </title> -->
 </head>
 <body>
 

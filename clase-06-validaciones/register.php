@@ -16,7 +16,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Contact us</title>
+    <!-- <title>Contact us</title> -->
 	 <style media="screen">
 	 	* {
 	 		box-sizing: border-box;
