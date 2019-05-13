@@ -23,8 +23,7 @@ if($_POST) {
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <!-- <link rel="stylesheet" href="master.css"> -->
-<<<<<<< HEAD
+  <link rel="stylesheet" href="styles.css">
   <title>Perfil de <?= $nombre ?> </title>
 </head>
 <body>
