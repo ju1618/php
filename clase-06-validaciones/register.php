@@ -74,25 +74,17 @@
 				<input type='text' name='username'>
 			</div>
 
-			<div class='form-control'>
-				<label for='password'>Contraseña<span class="required">*</span>:</label>
-				<input type='password' name='password'>
-			</div>
+      <?php if( isset($_GET["versionCorta"]) && $_GET["versionCorta"] !== "true") : ?>
+             <div class='form-control'>
+               <label for='adress'>Dirección:</label>
+               <input type='text' name='adress'>
+             </div>
 
-      <div class='form-control'>
-        <label for='password'>Confirmar contraseña<span class="required">*</span>:</label>
-        <input type='password' name='rePassword'>
-      </div>
-
-      <div class='form-control'>
-				<label for='phone' >Telefono de contacto<span class="required">*</span>:</label>
-				<input type='text' name='phone'>
-			</div>
-
-      <div class='form-control'>
-				<label for='address' >Direccion<span class="required">*</span>:</label>
-				<input type='text' name='address'>
-			</div>
+             <div class='form-control'>
+               <label for='phone-number'>Teléfono de contacto:</label>
+               <input type='text' name='phone-number'>
+             </div>
+      <?php endif; ?>
 
       <div class='form-control'>
         <label for='pais'>Nacionalidad<span class="required">*</span>:</label>
@@ -103,6 +95,19 @@
           <?php endforeach; ?>
         </select>
       </div>
+
+    	<div class='form-control'>
+      	<label for='password'>Contraseña<span class="required">*</span>:</label>
+      	<input type='password' name='password'>
+    		</div>
+
+      <?php if( isset($_GET["versionCorta"]) && $_GET["versionCorta"] !== "true") : ?>
+          <div class='form-control'>
+              <label for='confirm-password'>Confirmar contraseña<span class="required">*</span>:</label>
+              <input type='confirm-password' name='confirm-password'>
+          </div>
+      <?php endif; ?>
+
 
 			<div class='form-control'>
 				<button type="submit">ENVIAR</button>
